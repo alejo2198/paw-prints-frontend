@@ -1,0 +1,77 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.login{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $main-blue;
+    min-height:100vh;
+    padding: 2rem 1.5rem;
+   
+   
+
+    &__title{
+        color: white;
+        font-size: 4.5rem;
+        letter-spacing: .2rem;
+       
+        margin-bottom: 1rem;
+        text-shadow: .15rem .15rem .15rem black;
+    }
+    &__image{
+        width:15rem;
+        aspect-ratio: 1/1;
+        margin-bottom: 1.5rem;
+        
+        
+    }
+    &__form{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        height:15rem;
+        padding:2rem;
+        margin-bottom: 1.5rem;
+        border-radius:4rem;
+        outline:1px solid black;
+        box-shadow: .15rem .15rem .15rem black;
+    
+
+
+    }
+    &__input{
+        text-align: center;
+        padding: 0 3.5rem;
+        border-radius: 2rem;
+        outline:1px solid black;
+        border:none;
+        background-color: $light-blue;
+        color: white;
+        font-family: 'Acme';
+        font-size:2rem;
+        
+        text-shadow: .15rem .15rem .15rem black;
+        box-shadow: .15rem .15rem .15rem black;
+        
+    }
+
+}
+
+::placeholder{
+    color: white;
+}
+
+.signup-button{
+    
+    outline:none;
+    border:none;
+    background-color: $main-blue;
+    color: white;
+    font-family: 'Acme';
+    font-size:2rem;
+   
+    text-shadow: .2rem .2rem .2rem black;
+}

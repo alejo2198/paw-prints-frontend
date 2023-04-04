@@ -1,9 +1,11 @@
+import LoginPage from './pages/LoginPage/LoginPage';
 import './styles/partials/_global.scss'
+
 
 function App() {
   return (
     <div className="App">
-      PAWPRNTS
+      <LoginPage/>
     </div>
   );
 }
