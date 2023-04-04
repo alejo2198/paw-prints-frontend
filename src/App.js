@@ -1,11 +1,17 @@
-import LoginPage from './pages/LoginPage/LoginPage';
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import './styles/partials/_global.scss'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 
 function App() {
   return (
     <div className="App">
-      <LoginPage/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<RegistrationPage type="Login"/>}/>
+          <Route path='/signup' element={<RegistrationPage type="Sign up"/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

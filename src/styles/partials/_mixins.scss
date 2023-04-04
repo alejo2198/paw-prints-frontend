@@ -13,3 +13,24 @@
     }
 }
 
+//Styling
+
+@mixin applyTextShadow {
+    text-shadow: .15rem .15rem .15rem black;
+}
+
+@mixin applyBoxShadow {
+    box-shadow: .15rem .15rem .15rem black;
+}
+
+@mixin encapsulate {
+    border-radius: 2rem;
+}
+
+@mixin styleRegistrationInput{
+    font-family: 'Acme';
+    font-size:2rem;
+    @include applyTextShadow;
+    color: white;
+    text-align: center;
+}

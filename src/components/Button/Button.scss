@@ -1,16 +1,14 @@
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 .button{
-    text-align: center;
     padding: 0 3.5rem;
-    border-radius: 2rem;
     outline:1px solid black;
     border:none;
     background-color: $light-brown;
-    color: white;
-    font-family: 'Acme';
-    font-size:2rem;
   
-    text-shadow: .15rem .15rem .15rem black;
-    box-shadow: .15rem .15rem .15rem black;
+    @include applyBoxShadow;
+    @include encapsulate;
+    @include styleRegistrationInput
+
 }
