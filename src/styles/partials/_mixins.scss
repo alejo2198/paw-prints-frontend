@@ -34,3 +34,17 @@
     color: white;
     text-align: center;
 }
+
+//Flex-box Shortcuts
+
+@mixin flexColumn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,84 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.dog-details{
+    background-color: $main-blue;
+    min-height:100vh;
+    @include flexColumn;
+    padding: 2rem 1.5rem;
+
+    &__title{
+        color:white;
+        @include applyTextShadow;
+        font-size: 3rem;
+
+    }
+    &__form{
+        @include flexColumn;
+        width: 100%;
+    }
+   
+    
+    &__choose-file{
+        height: 3rem;
+        width: 15rem;
+        margin: 0 auto 1.5rem;
+        background-color: $light-brown;
+        position: relative;
+        font-size:1.5rem;
+        color: white;
+        text-align: center;
+        padding-top: .5rem;
+        @include applyBoxShadow;
+        @include applyTextShadow;
+        @include encapsulate;
+    }
+
+    &__preview{
+        position: absolute;
+        border-radius:50%;
+        height: 13rem;
+        width: 13rem;
+        z-index:1;
+        
+    }
+
+    &__inputs-container{
+        background-color: white;
+        border-radius: 5rem;
+        margin-bottom:1.5rem;
+        width: 100%;
+        padding: 1.5rem;
+        padding-top: 3rem;
+        @include applyBoxShadow;
+    }
+    &__label{
+        display: block;
+        font-size: 2rem;
+        color:$main-blue;
+        text-shadow: .1rem .1rem .1rem rgba(black,.5);
+    }
+    &__input{
+        border: .2rem solid $main-blue;
+        @include encapsulate;
+        width: 100%;
+        min-height: 4rem;
+        margin: 1.5rem auto;
+        @include applyBoxShadow;
+        &--textarea{
+            @extend .dog-details__input;
+            min-height: 15rem;
+        }
+    }
+}
+
+.image-container{
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+    margin: 1.5rem auto;
+    background-color: $light-brown;
+    @include applyBoxShadow;
+    @include flexCenter;
+    
+}
