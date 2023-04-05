@@ -11,6 +11,7 @@
         color: $dark-blue;
         @include applyTextShadow;
         margin-bottom: 1.5rem;
+        align-self: flex-start;
     }
     &__form{
         width: 100%; 
@@ -19,6 +20,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 1rem;
     }
 
     &__form-letf{
@@ -27,7 +29,7 @@
     }
 
     &__form-right{
-        width: 50%;
+        width: 45%;
     }
 
     &__image{
@@ -78,7 +80,7 @@
             border-radius: 2rem;
             background-color: white;
             font-family: 'Acme';
-            font-size:1.3rem;
+            font-size:1.1rem;
             color: black;
         }
     }
