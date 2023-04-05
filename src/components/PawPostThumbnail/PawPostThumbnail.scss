@@ -1,0 +1,20 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.thumbnail{
+    position: relative;
+    margin-right: 1rem;
+
+    &__image{
+        border: .5rem solid $dark-blue;
+        height: 11rem;
+        @include applyBoxShadow;
+        @include encapsulate;
+    }
+    &__emoji{
+        position: absolute;
+        bottom: .5rem;
+        left: .25rem;
+        width: 3rem;
+    }
+}
