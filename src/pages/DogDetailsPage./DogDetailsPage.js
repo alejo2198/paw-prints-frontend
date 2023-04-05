@@ -37,6 +37,7 @@ const DogDetailsPage = () => {
                     <label htmlFor="name" className="dog-details__label">Name:</label>
                     <input type="text" name="name" className="dog-details__input" />
                     <label htmlFor="age" className="dog-details__label">Age:</label>
+
                     <input type="text" name="age" className="dog-details__input" />
                     <label htmlFor="breed" className="dog-details__label">Breed:</label>
                     <input type="text" name="breed" className="dog-details__input" />
