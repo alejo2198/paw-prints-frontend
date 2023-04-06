@@ -10,8 +10,10 @@ import Cute from '../../assets/icons/emoticons/cute.svg';
 import CloseUp from '../../assets/images/close-up.png';
 import Birthday from '../../assets/images/birthday.png';
 import Vacation from '../../assets/images/vacation.png';
+import NavBar from '../../components/NavBar/NavBar';
 
 const ProfilePage = () => {
+    window.scrollTo(0, 0);
     const pawpost = {
         image: CloseUp,
         emoticon: Funny
@@ -25,6 +27,7 @@ const ProfilePage = () => {
         emoticon: Cute
     }
     return (
+        <>
         <section className="profile">
             <h1 className="profile__heading">Delilah</h1>
             <div className="profile__information">
@@ -56,6 +59,8 @@ const ProfilePage = () => {
             </div>
            
         </section>
+        <NavBar/>
+        </>
     );
 };
 

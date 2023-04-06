@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../../components/Button/Button';
+import NavBar from '../../components/NavBar/NavBar'
 
 import AngryEmoticon from '../../assets/icons/emoticons/angry.svg'
 import CrazyEmoticon from '../../assets/icons/emoticons/crazy.svg'
@@ -14,6 +15,7 @@ import './CRUDPawPostPage.scss'
 
 
 const CRUDPawPostPage = ({type}) => {
+    window.scrollTo(0, 0);
 
     let title = '';
     if (type ==='create'){
@@ -24,6 +26,7 @@ const CRUDPawPostPage = ({type}) => {
 
 
     return (
+        <>
         <section className="crud-pawpost">
             <h1 className="crud-pawpost__title">{title}</h1>
             <form className="crud-pawpost__form">
@@ -56,6 +59,8 @@ const CRUDPawPostPage = ({type}) => {
               
             </form>
         </section>
+        <NavBar/>
+        </>
     );
 };
 

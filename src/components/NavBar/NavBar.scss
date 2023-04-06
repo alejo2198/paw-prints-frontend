@@ -1,0 +1,33 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.nav{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    padding:1rem;
+    width: 100vw;
+    background-color: $nav-bar-color;
+    border-top: .2rem solid $dark-brown;
+    box-shadow: 1px 1px 2px $dark-brown;
+    border-radius: 1rem 1rem 0;
+    
+    &__list{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        list-style: none;
+    }
+    &__item{
+        border-radius: 30%;
+        overflow: hidden;
+        @include applyBoxShadow
+    }   
+    &__link{
+        background-color: $main-blue;
+    }
+    &__icon{
+        width: 6rem;
+    }
+    
+}

@@ -11,9 +11,12 @@ import NaughtyEmoticon from '../../assets/icons/emoticons/naughty.svg'
 import WholesomeEmoticon from '../../assets/icons/emoticons/wholesome.svg'
 
 import Birthday from '../../assets/images/birthday.png'
+import NavBar from '../../components/NavBar/NavBar';
 
 const PawPostPage = () => {
+    window.scrollTo(0, 0);
     return (
+        <>
         <section className="paw-post">
             <h1 className="paw-post__heading">PawPost</h1>
             <h2 className="paw-post__title">Delilah's Birthday</h2>
@@ -28,6 +31,8 @@ const PawPostPage = () => {
             <p className="paw-post__story">I am a spoiled princess.  I love the snow and hate the summer. Add me on PawPrints if u wanna bark at strangers together. I am a spoiled princess.  I love the snow and hate the summer. Add me on PawPrints if u wanna bark at strangers together</p>
             <img src={CuteEmoticon} alt="" className="paw-post__emoticon" />
         </section>
+        <NavBar/>
+        </>
     );
 };
 

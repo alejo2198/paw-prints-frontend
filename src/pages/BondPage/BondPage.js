@@ -3,8 +3,10 @@ import BlackPawFull from '../../assets/icons/paws/black-paw-full.svg'
 import BlackPaw from '../../assets/icons/paws/black-paw.svg'
 import Info from '../../assets/icons/info.svg'
 import BondMetric from '../../components/BondMetric/BondMetric';
+import NavBar from '../../components/NavBar/NavBar';
 
 const BondPage = () => {
+    window.scrollTo(0, 0);
     const categories=[
         {title:"Walks" ,color:"brown"},
         {title:"Belly Rubs" ,color:"blue"},
@@ -14,6 +16,7 @@ const BondPage = () => {
         {title:"Tricks" ,color:"blue"}
     ]
     return (
+        <>
         <section className="bond">
             <h1 className="bond__heading">Canine Connection</h1>
             <img className="bond__info-icon" src={Info} alt="" />
@@ -33,7 +36,11 @@ const BondPage = () => {
                     return <BondMetric title={category.title} color={category.color} key={categories.indexOf(category)}/>
                 })
             }
+            
         </section>
+        <NavBar/>
+        </>
+        
     );
 };
 
