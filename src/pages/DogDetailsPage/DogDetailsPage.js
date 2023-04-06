@@ -2,10 +2,16 @@
 import Button from '../../components/Button/Button'
 import './DogDetailsPage.scss'
 import{useEffect, useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const DogDetailsPage = () => {
     const[imageFile,setImageFile] = useState(null);
     const[preview,setPreview] = useState(null);
+    const navigate=useNavigate()
+    function handleSubmit(event){
+        event.preventDefault();
+        navigate("/profile/1")
+    }
 
     function updateImage(event){
        if (event.target.files){
@@ -26,7 +32,7 @@ const DogDetailsPage = () => {
     return (
         <section className="dog-details">
             <h1 className='dog-details__title'>Doggie Details</h1>
-            <form  className="dog-details__form">
+            <form  className="dog-details__form" onSubmit={handleSubmit}>
                 <div className="image-container">
                      <img src={preview} alt="" className="dog-details__preview"/>
                 </div>

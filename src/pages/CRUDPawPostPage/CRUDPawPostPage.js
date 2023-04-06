@@ -10,7 +10,10 @@ import NaughtyEmoticon from '../../assets/icons/emoticons/naughty.svg'
 import WholesomeEmoticon from '../../assets/icons/emoticons/wholesome.svg'
 import Placeholder from '../../assets/icons/image-placeholder.svg'
 
-import './CRUDPawPostPage.scss'
+import Return from '../../assets/icons/return.svg'
+
+import './CRUDPawPostPage.scss';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,16 +21,21 @@ const CRUDPawPostPage = ({type}) => {
     window.scrollTo(0, 0);
 
     let title = '';
+    let linkDisplay='';
+
     if (type ==='create'){
         title = 'New Pawpost'
+        linkDisplay='none'
     } else if (type ==='edit'){
         title = 'Edit Pawpost'
+        linkDisplay='crud-pawpost__return-link'
     }
 
 
     return (
         <>
         <section className="crud-pawpost">
+            <Link className={linkDisplay} to="/pawpost/1"><img src={Return} alt="" className="crud-pawpost__return-icon" /></Link>
             <h1 className="crud-pawpost__title">{title}</h1>
             <form className="crud-pawpost__form">
                 <div className="crud-pawpost__form-section">

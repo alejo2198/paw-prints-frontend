@@ -13,6 +13,8 @@ import WholesomeEmoticon from '../../assets/icons/emoticons/wholesome.svg'
 import Birthday from '../../assets/images/birthday.png'
 import NavBar from '../../components/NavBar/NavBar';
 
+import { Link } from 'react-router-dom';
+
 const PawPostPage = () => {
     window.scrollTo(0, 0);
     return (
@@ -23,7 +25,7 @@ const PawPostPage = () => {
             <div className="paw-post__information">
                 <p className="paw-post__date">22/05/2019</p>
                 <div className="paw-post__icon-container">
-                    <button className="paw-post__icon"><img src={Edit} alt="edit icon" /></button>
+                    <Link to="/pawpost/1/edit" className="paw-post__icon"><img src={Edit} alt="edit icon" /></Link>
                     <button className="paw-post__icon"><img src={Delete} alt="delete icon" /></button>
                 </div>
             </div>

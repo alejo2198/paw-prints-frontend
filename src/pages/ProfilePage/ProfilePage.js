@@ -12,6 +12,8 @@ import Birthday from '../../assets/images/birthday.png';
 import Vacation from '../../assets/images/vacation.png';
 import NavBar from '../../components/NavBar/NavBar';
 
+import {Link} from 'react-router-dom'
+
 const ProfilePage = () => {
     window.scrollTo(0, 0);
     const pawpost = {
@@ -52,10 +54,9 @@ const ProfilePage = () => {
             <h2 className="profile__category">PawPosts:</h2>
 
             <div className="profile__pawpost-container">
-                <PawPostThumbnail pawpost={pawpost}/>
-                <PawPostThumbnail pawpost={pawpost2}/>
-                <PawPostThumbnail pawpost={pawpost1}/>
-                
+                <Link to="/pawpost/1" ><PawPostThumbnail pawpost={pawpost}/></Link>
+                <Link to="/pawpost/1" ><PawPostThumbnail pawpost={pawpost2}/></Link>
+                <Link to="/pawpost/1" ><PawPostThumbnail pawpost={pawpost1}/></Link>
             </div>
            
         </section>

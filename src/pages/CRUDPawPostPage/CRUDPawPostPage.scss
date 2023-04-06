@@ -5,14 +5,15 @@
     min-height:100vh;
     @include flexColumn;
     padding: 2rem 1.5rem;
-    margin-bottom: 9rem;
+    margin-bottom: 7rem;
+    position: relative;
 
     &__title{
-        font-size: 4rem;
+        font-size: 3.5rem;
         color: $dark-blue;
         @include applyTextShadow;
         margin-bottom: 1.5rem;
-        align-self: flex-start;
+        //align-self: flex-start;
     }
     &__form{
         width: 100%; 
@@ -97,8 +98,16 @@
         margin-bottom: 1.5rem;
     }
     &__emoticon{
-
-
+        width:5rem;
+    }
+    &__return-icon{
+        width:3rem;
+        filter: drop-shadow(1px 1px 2px $dark-blue);
+    }
+    &__return-link{
+        position: absolute;
+        left:1rem;
+        top:3rem;
     }
 }
 
@@ -107,6 +116,9 @@
     display: flex;
     justify-content: flex-end;
     
+}
+.none{
+    display: none;
 }
 
 ::-webkit-calendar-picker-indicator{

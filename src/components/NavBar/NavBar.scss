@@ -5,7 +5,7 @@
     position: fixed;
     bottom:0;
     left: 0;
-    padding:1rem;
+    padding:.5rem;
     width: 100vw;
     background-color: $nav-bar-color;
     border-top: .2rem solid $dark-brown;
@@ -27,7 +27,7 @@
         background-color: $main-blue;
     }
     &__icon{
-        width: 6rem;
+        width: 5rem;
     }
     
 }
