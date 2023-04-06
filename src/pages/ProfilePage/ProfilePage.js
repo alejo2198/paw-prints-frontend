@@ -51,8 +51,8 @@ const ProfilePage = () => {
             <div className="profile__pawpost-container">
                 <PawPostThumbnail pawpost={pawpost}/>
                 <PawPostThumbnail pawpost={pawpost2}/>
-                
                 <PawPostThumbnail pawpost={pawpost1}/>
+                
             </div>
            
         </section>

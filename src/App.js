@@ -5,6 +5,7 @@ import DogDetailsPage from './pages/DogDetailsPage/DogDetailsPage';
 import CRUDPawPostPage from './pages/CRUDPawPostPage/CRUDPawPostPage';
 import PawPostPage from './pages/PawPostPage/PawPostPage'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
+import BondPage from './pages/BondPage/BondPage';
 
 
 function App() {
@@ -17,10 +18,13 @@ function App() {
           <Route path='/dog-details' element={<DogDetailsPage/>}/>
 
           <Route path='/profile/:id' element={<ProfilePage/>}/>
+          <Route path='/bond/:id' element={<BondPage/>}/>
 
           <Route path='/pawpost/add' element={<CRUDPawPostPage type="create"/>}/>
           <Route path='/pawpost/:id' element={<PawPostPage/>}/>
           <Route path='/pawpost/:id/edit' element={<CRUDPawPostPage type="edit"/>}/>
+
+          
         </Routes>
       </BrowserRouter>
     </div>
