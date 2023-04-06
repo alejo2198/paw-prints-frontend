@@ -2,18 +2,14 @@
 @use '../../styles/partials/mixins' as *;
 
 .crud-pawpost{
-    min-height:100vh;
-    @include flexColumn;
-    padding: 2rem 1.5rem;
-    margin-bottom: 7rem;
+    
+    @include flexColumnCenter;
+    @include SizeSection(7rem);
     position: relative;
 
     &__title{
-        font-size: 3.5rem;
-        color: $dark-blue;
-        @include applyTextShadow;
-        margin-bottom: 1.5rem;
-        //align-self: flex-start;
+        @include StyleSectionHeader(3.5rem)
+        
     }
     &__form{
         width: 100%; 
@@ -22,7 +18,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        margin-bottom: $margin-bottom-small;
     }
 
     &__form-letf{
@@ -36,20 +32,19 @@
 
     &__image{
         display: block;
-        padding: 2rem 1rem;
+        padding: $padding-large $padding-small;
         border:1rem solid $dark-blue;
-        border-radius:1rem
+        border-radius:1rem;
     }
 
     &__add-button{
         width: 100%;
-        padding: .5rem 2rem;
-        margin: 1.5rem 0;
+        padding: .5rem $padding-large;
+        margin: $margin-bottom-medium 0;
         outline:1px solid black;
         border:none;
         background-color: $dark-blue;
 
-       
         @include styleRegistrationInput;
         @include applyBoxShadow;
         @include encapsulate;
@@ -57,10 +52,7 @@
     }
 
     &__label{
-        display: block;
-        font-size: 2rem;
-        color:$dark-blue;
-        text-shadow: .1rem .1rem .1rem rgba(black,.5);
+        @include StyleLabel
     }
 
     &__input{
@@ -68,7 +60,7 @@
         @include encapsulate;
         width: 100%;
         min-height: 4rem;
-        margin: 1.5rem auto;
+        margin: $margin-bottom-medium auto;
         @include applyBoxShadow;
         &--textarea{
             @extend .crud-pawpost__input;

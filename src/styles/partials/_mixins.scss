@@ -1,22 +1,15 @@
 @use './variables' as *;
 
-//Breakpoints
-@mixin tablet {
-    @media screen and (min-width: $tablet-breakpoint) {
-        @content;
-    }
-}
 
-@mixin desktop {
-    @media screen and (min-width: $desktop-breakpoint) {
-        @content;
-    }
+@mixin applyLightTextShadow {
+    text-shadow: .1rem .1rem .1rem rgba(black,.8);
 }
-
-//Styling
 
 @mixin applyTextShadow {
     text-shadow: .15rem .15rem .15rem black;
+}
+@mixin applyBoldTextShadow {
+    text-shadow: .2rem .2rem .2rem black;
 }
 
 @mixin applyBoxShadow {
@@ -39,6 +32,11 @@
 
 @mixin flexColumn{
     display: flex;
+    flex-direction: column;
+}
+
+@mixin flexColumnCenter{
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
@@ -47,4 +45,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+//Section Shortcuts
+
+@mixin SizeSection($bottom){
+    min-height:100vh;
+    padding: 2rem 1.5rem;
+    margin-bottom:$bottom;
+}
+
+@mixin StyleSectionHeader($font-size){
+    font-size: $font-size;
+    color: $dark-blue;
+    @include applyTextShadow;
+    margin-bottom: $margin-bottom-medium;
+}
+
+//Label STyling
+
+@mixin StyleLabel{
+    display: block;
+    font-size: 2rem;
+    color:$dark-blue;
+    @include applyLightTextShadow;
 }

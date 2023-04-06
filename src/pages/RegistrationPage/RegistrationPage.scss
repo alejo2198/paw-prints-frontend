@@ -2,36 +2,33 @@
 @use '../../styles/partials/mixins' as *;
 
 .registration{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnCenter;
     background-color: $main-blue;
     min-height:100vh;
     padding: 2rem 1.5rem;
    
     &__title{
         color: white;
-        font-size: 4.5rem;
+        font-size: $registration-title-fs;
         letter-spacing: .2rem;
-        margin-bottom: 1rem;
+        margin-bottom: $margin-bottom-small;
         @include applyTextShadow;
     }
 
     &__image{
         width:15rem;
         aspect-ratio: 1/1;
-        margin-bottom: 1.5rem; 
+        margin-bottom: $margin-bottom-medium;
     }
 
     &__form{
         background-color: white;
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         justify-content: space-between;
         width: 90%;
         height:15rem;
-        padding:2rem;
-        margin-bottom: 1.5rem;
+        padding:$padding-large;
+        margin-bottom: $margin-bottom-medium;
         border-radius:4rem;
         outline:1px solid black;
         @include applyBoxShadow;
@@ -43,7 +40,6 @@
         outline:1px solid black;
         border:none;
         background-color: $light-blue;
-        
         @include applyBoxShadow;
         @include styleRegistrationInput   
     }
@@ -60,7 +56,7 @@
     text-decoration: none;
     
     @include styleRegistrationInput;
-    text-shadow: .2rem .2rem .2rem black;
+    @include applyBoldTextShadow;
 }
 .hide{
     display: none;
