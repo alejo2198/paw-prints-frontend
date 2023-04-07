@@ -7,7 +7,7 @@
     align-items: flex-start;
   
     &__heading{
-        font-size: 2rem;
+        font-size: $fs-title;
         text-shadow: 2px 2px 2px rgba(black,0.3);
         margin-bottom: $margin-bottom-small;
     }
@@ -24,14 +24,12 @@
 
     &__text{
         line-height: 2rem;
-        font-size: 1.4rem;
+        font-size: $fs-text;
         text-shadow: 2px 2px 2px rgba(black,0.3);
     }
     &__total{
-        line-height: 2rem;
-        font-size: 1.4rem;
+        @extend .metric__text;
         margin-bottom:  $margin-bottom-small;
-        text-shadow: 2px 2px 2px rgba(black,0.3);
         align-self: flex-end;
     }
     &__add-icon{

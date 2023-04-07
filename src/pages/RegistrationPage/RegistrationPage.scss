@@ -4,12 +4,11 @@
 .registration{
     @include flexColumnCenter;
     background-color: $main-blue;
-    min-height:100vh;
-    padding: 2rem 1.5rem;
+   @include SizeSection(0);
    
     &__title{
         color: white;
-        font-size: $registration-title-fs;
+        font-size: $fs-registration-title;
         letter-spacing: .2rem;
         margin-bottom: $margin-bottom-small;
         @include applyTextShadow;

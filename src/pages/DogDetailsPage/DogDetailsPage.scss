@@ -9,15 +9,13 @@
     &__title{
         color:white;
         @include applyTextShadow;
-        font-size: 3rem;
-
+        font-size: $fs-title-large;
     }
     &__form{
         @include flexColumnCenter;
         width: 100%;
     }
    
-    
     &__choose-file{
         height: 3rem;
         width: 15rem;
@@ -45,15 +43,15 @@
     &__inputs-container{
         background-color: white;
         border-radius: 5rem;
-        margin-bottom:1.5rem;
+        margin-bottom:$margin-bottom-medium;
         width: 100%;
-        padding: 1.5rem;
+        padding: $padding-medium;
         padding-top: 3rem;
         @include applyBoxShadow;
     }
     &__label{
         display: block;
-        font-size: 2rem;
+        font-size: $fs-label;
         color:$dark-blue;
         text-shadow: .1rem .1rem .1rem rgba(black,.5);
     }

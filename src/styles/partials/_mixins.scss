@@ -1,32 +1,6 @@
 @use './variables' as *;
 
 
-@mixin applyLightTextShadow {
-    text-shadow: .1rem .1rem .1rem rgba(black,.8);
-}
-
-@mixin applyTextShadow {
-    text-shadow: .15rem .15rem .15rem black;
-}
-@mixin applyBoldTextShadow {
-    text-shadow: .2rem .2rem .2rem black;
-}
-
-@mixin applyBoxShadow {
-    box-shadow: .15rem .15rem .15rem black;
-}
-
-@mixin encapsulate {
-    border-radius: 2rem;
-}
-
-@mixin styleRegistrationInput{
-    font-family: 'Acme';
-    font-size:2rem;
-    @include applyTextShadow;
-    color: white;
-    text-align: center;
-}
 
 //Flex-box Shortcuts
 
@@ -63,11 +37,38 @@
     margin-bottom: $margin-bottom-medium;
 }
 
-//Label STyling
+//Label Styling
 
 @mixin StyleLabel{
     display: block;
-    font-size: 2rem;
+    font-size: $fs-label;
     color:$dark-blue;
     @include applyLightTextShadow;
+}
+
+@mixin applyLightTextShadow {
+    text-shadow: .1rem .1rem .1rem rgba(black,.8);
+}
+
+@mixin applyTextShadow {
+    text-shadow: .15rem .15rem .15rem black;
+}
+@mixin applyBoldTextShadow {
+    text-shadow: .2rem .2rem .2rem black;
+}
+
+@mixin applyBoxShadow {
+    box-shadow: .15rem .15rem .15rem black;
+}
+
+@mixin encapsulate {
+    border-radius: 2rem;
+}
+
+@mixin styleRegistrationInput{
+    font-family: 'Acme';
+    font-size:$fs-input-large;
+    @include applyTextShadow;
+    color: white;
+    text-align: center;
 }

@@ -37,7 +37,7 @@ const DogDetailsPage = () => {
                      <img src={preview} alt="" className="dog-details__preview"/>
                 </div>
                 <input type="file" name="image" id ="image" hidden onChange={updateImage}/>
-                <label htmlFor='image' className='dog-details__choose-file'>Add Doggie Headshot</label>
+                <label htmlFor='image' className='dog-details__choose-file'>+ Doggie Headshot</label>
 
                 <div className="dog-details__inputs-container">
                     <label htmlFor="name" className="dog-details__label">Name:</label>
