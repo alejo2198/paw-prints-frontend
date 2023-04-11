@@ -28,7 +28,7 @@ const DogDetailsPage = () => {
             console.log(error)
         })
         
-        navigate("/profile/1")
+        navigate("/profile")
     }
 
     function updateImage(event){
