@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# PawPrints
+Welcome to Pawprints. A dog lover's paradise. This application allows you to journal your experiences with your dog. Additionally it calculates how close you are with your dog through a series of fun metrics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
 
-## Available Scripts
+run $ npm install in both pawprints-frontend and pawprints-backend folders 
 
-In the project directory, you can run:
+Knex.js & MySQL
+ Run command $ knex migrate:up with the following migration files in this order: users, doggos,posts,metrics. 
 
-### `npm start`
+.env
+Please insert personal environment variables for the following:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+PORT DB_LOCAL_DBNAME DB_LOCAL_USER DB_LOCAL_PASSWORD JWT_SECRET
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
+React
+SQL
+Node.js
 
-### `npm test`
+## Lessons Learned
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There were multiple lessons that I learned along the way. Number one is to never underestimate the value of project planning.
+My plan was too vague and didn't have a solid outline for certain features of my application. Figuring it out while trying to solve the code logic, made it a stressul situation.
 
-### `npm run build`
+Number two was to include a more realistic time for design. I had originally thought I could make a mockup in day and start coding. I was sooooo wrong. It endedup taking two and a half days of my week deadline. Knowing this would have helped me scale down my project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Next Steps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I have multiple routes and features that I would like to implement soon. I want user interactions, with accounts able to have best friends. I'd also like to enhance my canine connection section by adding badges when you complete allpaws so it can reset. Finally my forms have no validation so I 'd like to add that as wells
