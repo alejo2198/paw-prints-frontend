@@ -21,6 +21,8 @@
     }
 
     &__form-letf{
+        @include flexColumnCenter;
+        
         width: 35%;
         margin-right:0% ;
     }
@@ -30,16 +32,18 @@
     }
 
     &__image{
+        height: 13rem;
         display: block;
         padding: $padding-large $padding-small;
         border:1rem solid $dark-blue;
         border-radius:1rem;
+        margin-bottom: $margin-bottom-medium;
     }
 
     &__add-button{
         width: 100%;
         padding: .5rem $padding-large;
-        margin: $margin-bottom-medium 0;
+        margin-left: .6rem;
         outline:1px solid black;
         border:none;
         background-color: $dark-blue;

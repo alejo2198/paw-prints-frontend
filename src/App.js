@@ -17,8 +17,8 @@ function App() {
           <Route path='/signup' element={<RegistrationPage type="Sign up"/>}/>
           <Route path='/dog-details' element={<DogDetailsPage/>}/>
 
-          <Route path='/profile/:id' element={<ProfilePage/>}/>
-          <Route path='/bond/:id' element={<BondPage/>}/>
+          <Route path='/profile' element={<ProfilePage/>}/>
+          <Route path='/bond/' element={<BondPage/>}/>
 
           <Route path='/pawpost/add' element={<CRUDPawPostPage type="create"/>}/>
           <Route path='/pawpost/:id' element={<PawPostPage/>}/>
