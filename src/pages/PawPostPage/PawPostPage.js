@@ -76,7 +76,7 @@ const PawPostPage = () => {
                     <button className="paw-post__icon"><img src={Delete} alt="delete icon" onClick={handleDelete}/></button>
                 </div>
             </div>
-            <img src={Birthday} alt="pawpost image" className="paw-post__image"/>
+            <img src={pawPost.image} alt="pawpost image" className="paw-post__image"/>
             <p className="paw-post__story">{pawPost.story}</p>
             <img src={postEmojiImage} alt="" className="paw-post__emoticon" />
         </section>

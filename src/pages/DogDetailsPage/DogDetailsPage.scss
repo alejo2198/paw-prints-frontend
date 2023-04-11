@@ -62,7 +62,10 @@
         min-height: 4rem;
         margin: $margin-bottom-medium auto;
         @include applyBoxShadow;
+        font-family: 'Acme';
+        font-size: $fs-text;
         &--textarea{
+            padding: .5rem;
             @extend .dog-details__input;
             min-height: 15rem;
         }

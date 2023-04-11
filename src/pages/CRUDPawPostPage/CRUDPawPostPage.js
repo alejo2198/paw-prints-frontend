@@ -27,6 +27,8 @@ const CRUDPawPostPage = ({type}) => {
     const[imageFile,setImageFile] = useState(null);
     const[preview,setPreview] = useState(Placeholder);
     const [emoji,setEmoji] = useState(null)
+    const [isSelectedArray,setIsSelectedArray] = useState([false,false,false,false,false,false]);
+    const emojivalues=["wholesome","cute","funny","naughty","crazy","angry"]
     if(!emoji){
         window.scrollTo(0, 0);
     }
@@ -55,6 +57,10 @@ const CRUDPawPostPage = ({type}) => {
     function updateEmoji(event){
         event.preventDefault()
         setEmoji(event.target.name)
+        const selected = emojivalues.map(emoji=>{
+            return event.target.name === emojivalues[emojivalues.indexOf(emoji)]
+        })
+        setIsSelectedArray(selected)
     }
     useEffect(()=>{
         if (imageFile){
@@ -89,9 +95,6 @@ const CRUDPawPostPage = ({type}) => {
         }
        
     }
-
-
-
     return (
         <>
         <section className="crud-pawpost">
@@ -114,15 +117,16 @@ const CRUDPawPostPage = ({type}) => {
                 </div>
                 <label className="crud-pawpost__label">Emotion:</label>  
                 <div className="crud-pawpost__emoticon-section">
-                    <div className="crud-pawpost__emoticon-container"><img className="crud-pawpost__emoticon" name="wholesome" src={WholesomeEmoticon} alt="emoji"onClick={updateEmoji} /></div>
-                    <div className="crud-pawpost__emoticon-container"><img className="crud-pawpost__emoticon" name="cute" src={CuteEmoticon} alt="emoji"onClick={updateEmoji} /></div>
-                    <div className="crud-pawpost__emoticon-container"><img className="crud-pawpost__emoticon" name="funny" src={FunnyEmoticon} alt="emoji"onClick={updateEmoji} /></div>
-                    <div className="crud-pawpost__emoticon-container"><img className="crud-pawpost__emoticon" name="naughty" src={NaughtyEmoticon} alt="emoji"onClick={updateEmoji} /></div>
-                    <div className="crud-pawpost__emoticon-container"><img className="crud-pawpost__emoticon" name="crazy" src={CrazyEmoticon} alt="emoji"onClick={updateEmoji} /></div>
-                    <div className="crud-pawpost__emoticon-container"><img className="crud-pawpost__emoticon" name="angry" src={AngryEmoticon} alt="emoji"onClick={updateEmoji} /></div>
+                    <div className="crud-pawpost__emoticon-container"><img className={`crud-pawpost__emoticon ${isSelectedArray[0]? "selected":""}`} name="wholesome" src={WholesomeEmoticon} alt="emoji"onClick={updateEmoji} /></div>
+                    <div className="crud-pawpost__emoticon-container"><img className={`crud-pawpost__emoticon ${isSelectedArray[1]? "selected":""}`} name="cute" src={CuteEmoticon} alt="emoji"onClick={updateEmoji} /></div>
+                    <div className="crud-pawpost__emoticon-container"><img className={`crud-pawpost__emoticon ${isSelectedArray[2]? "selected":""}`} name="funny" src={FunnyEmoticon} alt="emoji"onClick={updateEmoji} /></div>
+                    <div className="crud-pawpost__emoticon-container"><img className={`crud-pawpost__emoticon ${isSelectedArray[3]? "selected":""}`} name="naughty" src={NaughtyEmoticon} alt="emoji"onClick={updateEmoji} /></div>
+                    <div className="crud-pawpost__emoticon-container"><img className={`crud-pawpost__emoticon ${isSelectedArray[4]? "selected":""}`} name="crazy" src={CrazyEmoticon} alt="emoji"onClick={updateEmoji} /></div>
+                    <div className="crud-pawpost__emoticon-container"><img className={`crud-pawpost__emoticon ${isSelectedArray[5]? "selected":""}`} name="angry" src={AngryEmoticon} alt="emoji"onClick={updateEmoji} /></div>
                 </div>
                 <label className="crud-pawpost__label" htmlFor="story">Story:</label>
-                <input className="crud-pawpost__input--textarea" type="text" name="story" id="" />
+                
+                <textarea name="story"  className="crud-pawpost__input--textarea" rows="10"></textarea>
                 <div className='align-left'>
                     <Button type="Submit"/>
                 </div>

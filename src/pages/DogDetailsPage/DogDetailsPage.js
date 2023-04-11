@@ -66,7 +66,7 @@ const DogDetailsPage = () => {
                     <label htmlFor="breed" className="dog-details__label">Breed:</label>
                     <input type="text" name="breed" className="dog-details__input" />
                     <label htmlFor="bio" className="dog-details__label">Bio:</label>
-                    <input type="text" name="bio" className="dog-details__input--textarea" />     
+                    <textarea name="bio" className="dog-details__input--textarea"  rows="10"></textarea>  
                 </div>
 
                 <Button type="Submit"/>

@@ -65,7 +65,10 @@
         min-height: 4rem;
         margin: $margin-bottom-medium auto;
         @include applyBoxShadow;
+        font-family: 'Acme';
+        font-size: $fs-text;
         &--textarea{
+            padding:.5rem;
             @extend .crud-pawpost__input;
             min-height: 15rem;
         }
@@ -124,4 +127,9 @@
     cursor: pointer;
     position: relative;
     right:.5rem;
+}
+.selected{
+    width:10rem;
+    border: .5rem solid $main-blue;
+    border-radius: 4rem;
 }
