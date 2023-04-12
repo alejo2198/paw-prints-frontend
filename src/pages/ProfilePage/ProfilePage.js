@@ -6,6 +6,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import {Link} from 'react-router-dom';
 import { getDog,getPosts } from '../../utils/apiRequests';
 import { useState,useEffect } from 'react';
+import Loading from '../../components/Loading/Loading'
 
 const ProfilePage = () => {
     window.scrollTo(0, 0);
@@ -27,8 +28,9 @@ const ProfilePage = () => {
     },[])
 
     if (!userDog || !pawPosts){
-        return <>Loading...</>
+        return <Loading/>  
     }
+    
     if(!Array.isArray(pawPosts)){
         return (
             <>
@@ -95,7 +97,7 @@ const ProfilePage = () => {
             <div className="profile__pawpost-container">
                     {
                         pawPosts.map(pawPost=>{
-                            return <Link to= {`/pawpost/${pawPost.id}`} ><PawPostThumbnail pawpost={pawPost} key={pawPosts.indexOf(pawPost)}/></Link>
+                            return <Link to= {`/pawpost/${pawPost.id}`} key={pawPosts.indexOf(pawPost)}><PawPostThumbnail pawpost={pawPost} key={pawPosts.indexOf(pawPost)}/></Link>
                         })
                     }
             </div>

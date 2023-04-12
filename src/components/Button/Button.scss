@@ -9,6 +9,10 @@
   
     @include applyBoxShadow;
     @include encapsulate;
-    @include styleRegistrationInput
+    @include styleRegistrationInput;
+
+    &:hover{
+        background-color: $dark-brown;
+    }
 
 }

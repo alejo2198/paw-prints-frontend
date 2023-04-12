@@ -19,7 +19,7 @@ const RegistrationPage = ({type}) => {
             .then(response=>{
                 if(response.status === 200){
                     sessionStorage.setItem('token',response.data.accessToken)
-                    navigate("/profile/1")
+                    navigate("/profile")
                 }else{
                     console.log("incorrect username or password")
                 }   

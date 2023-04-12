@@ -3,6 +3,7 @@
 
 .thumbnail{
     position: relative;
+    transition: all .2s;
     
     &__image{
         border: .5rem solid $dark-blue;
@@ -15,5 +16,8 @@
         bottom: .5rem;
         left: .25rem;
         width: 3rem;
+    }
+    &:hover{
+        transform:translateY(-5%) scale(1.1)
     }
 }

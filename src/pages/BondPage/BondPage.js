@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import { useState,useEffect } from 'react';
 import { getMetrics,incrementMetric } from '../../utils/apiRequests';
 import { pawCalculator,mainPaws } from '../../utils/bondhelper';
+import Loading from '../../components/Loading/Loading';
 
 
 const BondPage = () => {
@@ -48,7 +49,7 @@ const BondPage = () => {
     }
 
     if (!metrics){
-        return <>Loading...</>
+        return <Loading/>
     }else{
 
         let pawArray = pawCalculator(metrics.main,30)

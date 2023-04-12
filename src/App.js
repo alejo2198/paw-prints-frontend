@@ -6,6 +6,7 @@ import CRUDPawPostPage from './pages/CRUDPawPostPage/CRUDPawPostPage';
 import PawPostPage from './pages/PawPostPage/PawPostPage'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
 import BondPage from './pages/BondPage/BondPage';
+import Loading from './components/Loading/Loading';
 
 
 function App() {

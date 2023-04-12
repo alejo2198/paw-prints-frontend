@@ -8,8 +8,18 @@ import BrownPaw from '../../assets/icons/paws/brown-paw.svg'
 import AddIcon from '../../assets/icons/add.svg';
 import { incrementMetric } from '../../utils/apiRequests';
 import { pawCalculator } from '../../utils/bondhelper';
+import {useEffect, useState} from 'react'
 
 const BondMetric = ({title,color,metricValue,total,index,handleIncrement}) => {
+    const [animation,setAnimation] = useState(false)
+    useEffect(()=>{
+        if(animation){
+            setTimeout(()=>{
+                setAnimation(false)
+            },100)
+            
+        }
+    },[animation])
     
     let fullPaw = '';
     let outlinePaw = '';
@@ -22,6 +32,7 @@ const BondMetric = ({title,color,metricValue,total,index,handleIncrement}) => {
         outlinePaw = BrownPaw;
     }
     function Increment() {
+        setAnimation(true)
         let metricName=''
         switch(index){
             case 0:
@@ -67,7 +78,7 @@ const BondMetric = ({title,color,metricValue,total,index,handleIncrement}) => {
                 <img className="metric__paw" src={pawArray[3]} alt="" />
                 <img className="metric__paw" src={pawArray[4]} alt="" />
             </div>
-            <img className="metric__add-icon" src={AddIcon} alt="" onClick={Increment}/>
+            <img className={"metric__add-icon " + (animation? 'animate':'')} src={AddIcon} alt="" onClick={Increment}/>
 
             <p className="metric__text">{(total/5) - metricValue%(total/5)} more min challenge paws until next paw</p>
             <p className="metric__total">Total: {metricValue}/{total}</p>
